@@ -1,0 +1,24 @@
+
+war_name_parts_list = {
+	key = "demilitarize_war_names"
+	parts = {
+		"Demilitarization War" = 1
+		"Pacification War" = 1
+		"Containment War" = 1
+	}
+}
+
+# Unify - No Federations
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+                type = wg_demilitarize
+                owner = attacker
+            }
+		}
+	}
+	format = "[This.MainDefender.GetAdj] <demilitarize_war_names>"
+}
