@@ -1,0 +1,8 @@
+﻿l_english:
+
+ casus_belli_cb_demilitarize:0 "Demilitarize"
+ war_goal_wg_demilitarize:0 "Demilitarize"
+ war_goal_wg_demilitarize_desc:0 "War is waged to contain the warmongering tendencies of the enemy."
+ wg_demilitarize_accept:0 "§Y[From.GetName]§! is demilitarized, reducing their §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§! by §R-50%§! for §Y20§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
+ dm_demilitarized:0 "Demilitarized"
+ dm_demilitarized_desc:0 "§LWe were demilitarized by another Empire.§!"
