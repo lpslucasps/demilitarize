@@ -1,4 +1,20 @@
-
 dm_demilitarized {
 	country_naval_cap_mult = -0.5
+	diplo_weight_mult = -0.25
+	pop_happiness = -0.1
+	country_influence_produces_mult = -0.1
+	pop_ethic_militarist_attraction_mult = 0.25
+}
+
+dm_demilitarized_mil {
+	country_naval_cap_mult = -0.5
+	diplo_weight_mult = -0.25
+	pop_happiness = -0.25
+	country_influence_produces_mult = -0.2
+	pop_ethic_militarist_attraction_mult = 0.25
+}
+
+dm_demilitarizer {
+	country_influence_produces_add = 0.25
+	pop_happiness = 0.05
 }

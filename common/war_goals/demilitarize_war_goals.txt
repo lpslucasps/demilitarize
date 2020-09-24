@@ -5,7 +5,11 @@ wg_demilitarize = {
 	hide_if_no_cb = yes
 
 	surrender_acceptance = -75
-
+	allowed_peace_offers = { 
+		surrender
+		status_quo
+		demand_surrender
+	}
 
 	potential = {
 		NOR = {
@@ -23,9 +27,19 @@ wg_demilitarize = {
 	on_accept = {
         custom_tooltip = wg_demilitarize_accept
         hidden_effect = {
-            add_resource = { influence = 100 }
+			add_resource = { influence = 150 }
+			add_modifier = {
+				modifier = dm_demilitarizer
+				days = 7200
+			}
             from = {
-				add_modifier = { modifier = dm_demilitarized days = 7200 }
+				if = {
+					limit = { is_militarist = yes }
+					add_modifier = { modifier = dm_demilitarized_mil days = 7200 }
+				}
+				else = {
+					add_modifier = { modifier = dm_demilitarized days = 7200 }
+				}
 				set_policy = {
 					policy = war_philosophy
 					option = no_wars
@@ -36,10 +50,23 @@ wg_demilitarize = {
 				target = from
 				free_guarantee_days = 7200
 			}
-    }
+			# set_closed_borders = {
+			# 	who = from
+			# 	status = no
+			# }
+		}
+		
 	}
-
+ 
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 2
+			from = { has_ethic = ethic_militarist }
+		}
+		modifier = {
+			factor = 5
+			from = { has_ethic = ethic_fanatic_militarist }
+		}
 	}
 }
