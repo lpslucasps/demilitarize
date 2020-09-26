@@ -30,15 +30,15 @@ wg_demilitarize = {
 			add_resource = { influence = 150 }
 			add_modifier = {
 				modifier = dm_demilitarizer
-				days = 7200
+				days = 3600
 			}
             from = {
 				if = {
 					limit = { is_militarist = yes }
-					add_modifier = { modifier = dm_demilitarized_mil days = 7200 }
+					add_modifier = { modifier = dm_demilitarized_mil days = 3600 }
 				}
 				else = {
-					add_modifier = { modifier = dm_demilitarized days = 7200 }
+					add_modifier = { modifier = dm_demilitarized days = 3600 }
 				}
 				set_policy = {
 					policy = war_philosophy
@@ -48,14 +48,13 @@ wg_demilitarize = {
 			}
 			guarantee_country = {
 				target = from
-				free_guarantee_days = 7200
+				free_guarantee_days = 3600
 			}
 			# set_closed_borders = {
 			# 	who = from
 			# 	status = no
 			# }
 		}
-		
 	}
  
 	ai_weight = {
