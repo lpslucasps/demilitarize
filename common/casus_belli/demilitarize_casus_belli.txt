@@ -3,7 +3,7 @@ cb_demilitarize = {
 	show_notification = no
 	potential = {
 		is_country_type = default
-        is_pacifist = yes
+		is_pacifist = yes
 	}
 	is_valid = {
         from = { is_country_type = default }

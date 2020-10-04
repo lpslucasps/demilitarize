@@ -2,6 +2,6 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_wg_demilitarize"
-		texturefile = "gfx/interface/icons/diplomacy/diplomacy_opinion.dds"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_isprotectorate.dds"
 	}
 }
