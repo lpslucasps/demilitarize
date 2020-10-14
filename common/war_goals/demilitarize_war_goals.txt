@@ -18,21 +18,25 @@ wg_demilitarize = {
 		}
 		has_total_war_cb = no
 		from = {
-			NOT = { has_modifier = dm_demilitarized }
+			NOT = { has_modifier = dm_demilitarized }  # Cannot be demilitarized twice
 		}
 	}
+
 	possible = {
-		always = yes
+		# always = yes
+		relative_power = { 
+			who = from 
+			category = fleet
+			value < overwhelming
+		}
 	}
+
 	on_accept = {
         custom_tooltip = wg_demilitarize_accept
         hidden_effect = {
-			add_resource = { influence = 150 }
-			add_modifier = {
-				modifier = dm_demilitarizer
-				days = 3600
-			}
+			# Loser
             from = {
+				save_event_target_as = loser
 				if = {
 					limit = { is_militarist = yes }
 					add_modifier = { modifier = dm_demilitarized_mil days = 3600 }
@@ -46,14 +50,17 @@ wg_demilitarize = {
 					cooldown = yes
 				}
 			}
+
+			# Victor
 			guarantee_country = {
 				target = from
 				free_guarantee_days = 3600
 			}
-			# set_closed_borders = {
-			# 	who = from
-			# 	status = no
-			# }
+			add_resource = { influence = 150 }
+			add_modifier = {
+				modifier = dm_demilitarizer
+				days = 3600
+			}
 		}
 	}
  
