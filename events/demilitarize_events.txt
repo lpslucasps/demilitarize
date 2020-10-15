@@ -1,0 +1,62 @@
+# Prevent getting free influence
+country_event = {
+	id = demilitarization.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				is_guaranteeing = event_target:demilitarized_loser
+			}
+			country_event = {
+				id = demilitarization.2
+				days = 30
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = dm_demilitarizer
+			}
+			remove_modifier = dm_demilitarizer
+			# TODO notify
+			# create_message = {
+			# 	type = MESSAGE_TYPE_GALPULSE
+			# 	localization = MESSAGE_GALPULSE_NAVAL_CAP1
+			# 	days = 30
+			# 	target = capital_scope
+			# }
+		}
+	}
+}
+
+country_event = {
+	id = demilitarization.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				is_guaranteeing = event_target:demilitarized_loser
+			}
+			country_event = {
+				id = demilitarization.1
+				days = 30
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = dm_demilitarizer
+			}
+			remove_modifier = dm_demilitarizer
+			# TODO notify
+			# create_message = {
+			# 	type = MESSAGE_TYPE_GALPULSE
+			# 	localization = MESSAGE_GALPULSE_NAVAL_CAP1
+			# 	days = 30
+			# 	target = capital_scope
+			# }
+		}
+	}
+}
