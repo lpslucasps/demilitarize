@@ -17,7 +17,15 @@ dm_demilitarized_mil {
 }
 
 dm_demilitarizer {
-	country_influence_produces_add = 0.25
+	country_base_influence_produces_add = 0.25
 	pop_happiness = 0.05
 	pop_ethic_pacifist_attraction_mult = 0.25
+}
+
+dm_prosperity_faction_approval {
+	faction_approval = 0.3
+}
+
+dm_isolationist_faction_approval {
+	faction_approval = 0.2
 }

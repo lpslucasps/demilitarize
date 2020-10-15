@@ -1,4 +1,3 @@
-
 wg_demilitarize = {
 	casus_belli = cb_demilitarize
 
@@ -24,19 +23,26 @@ wg_demilitarize = {
 
 	possible = {
 		# always = yes
-		relative_power = { 
-			who = from 
-			category = fleet
-			value < overwhelming
+		from = {
+			relative_power = { 
+				who = root 
+				category = fleet
+				value > pathetic
+			}
+		}
+		from = {
+			NOT = {
+				has_policy_flag = no_wars  # Cannot demilitarize defensive country
+			}
 		}
 	}
 
 	on_accept = {
-        custom_tooltip = wg_demilitarize_accept
+		custom_tooltip = wg_demilitarize_accept
         hidden_effect = {
 			# Loser
             from = {
-				save_event_target_as = loser
+				save_event_target_as = demilitarization_loser
 				if = {
 					limit = { is_militarist = yes }
 					add_modifier = { modifier = dm_demilitarized_mil days = 3600 }
@@ -48,6 +54,13 @@ wg_demilitarize = {
 					policy = war_philosophy
 					option = no_wars
 					cooldown = yes
+				}
+				root = {
+					save_event_target_as = demilitarization_victor  # Must before 102
+				}
+				country_event = {
+					id = demilitarization.102
+					days = 1
 				}
 			}
 
@@ -61,6 +74,30 @@ wg_demilitarize = {
 				modifier = dm_demilitarizer
 				days = 3600
 			}
+			every_pop_faction = {
+				if = {
+					limit = { 
+						is_pop_faction_type = isolationist 
+					}
+					add_modifier = {
+						modifier = dm_isolationist_faction_approval
+						days = 7200
+					}
+				}
+				else_if = {
+					limit = {
+						is_pop_faction_type = prosperity
+					}
+					add_modifier = {
+						modifier = dm_prosperity_faction_approval
+						days = 7200
+					}
+				}
+			}
+			country_event = {
+				id = demilitarization.101
+				days = 1  # Delay to avoid removing buff
+			}
 		}
 	}
  
@@ -73,6 +110,10 @@ wg_demilitarize = {
 		modifier = {
 			factor = 5
 			from = { has_ethic = ethic_fanatic_militarist }
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
 		}
 	}
 }

@@ -1,0 +1,16 @@
+dm_remove_loser_mod = {
+	$loser$ = {
+		if = {
+			limit = {
+				has_modifier = dm_demilitarized
+			}
+			remove_modifier = dm_demilitarized
+		}
+		else_if = {
+			limit = {
+				has_modifier = dm_demilitarized_mil
+			}
+			remove_modifier = dm_demilitarized_mil
+		}
+	}
+}

@@ -3,10 +3,16 @@
  casus_belli_cb_demilitarize:0 "解除武装"
  war_goal_wg_demilitarize:0 "裁军"
  war_goal_wg_demilitarize_desc:0 "以战止战。"
- wg_demilitarize_accept:0 "§Y[From.GetName]§!被强制裁军, §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§!在§Y10§!年内§R-50%§!；降低§Y$mod_country_base_influence_produces_mult$§!；人口倾向$ethic_militarist$；§Y$MOD_STARBASE_SHIP_BUILD_TIME_MULT$§!、§Y$MOD_POP_HAPPINESS$§!、§Y$MOD_DIPLO_WEIGHT_MULT$§!减成。\n§Y[Root.GetName]§!得到§G+150§!£influence£和§Y$MOD_POP_HAPPINESS$§!加成；人口倾向$ethic_pacifist$。\n"
+ wg_demilitarize_accept:0 "§Y[From.GetName]§!被强制裁军, §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§!在§Y10§!年内§R-50%§!；降低§Y$mod_country_base_influence_produces_mult$§!；人口倾向$ethic_militarist$；§Y$MOD_STARBASE_SHIP_BUILD_TIME_MULT$§!、§Y$MOD_POP_HAPPINESS$§!、§Y$MOD_DIPLO_WEIGHT_MULT$§!减成。\n§Y[Root.GetName]§!得到§G+150§!£influence£和§Y$MOD_POP_HAPPINESS$§!加成；人口倾向$ethic_pacifist$。"
  dm_demilitarized:0 "解除武装"
  dm_demilitarized_desc:0 "§L我们被其他国家强制要求裁军了。§!"
  dm_demilitarized_mil:0 "$dm_demilitarized$"
  dm_demilitarized_mil_desc:0 "$dm_demilitarized_desc$"
  dm_demilitarizer:0 "执行裁军"
  dm_demilitarizer_desc:0 "§L我们正在执行对其他国家的裁军。§!"
+
+ MESSAGE_DEMILITRAIZATION_REVOKE_GUARANTEE:0 "由于$VICTOR|H$撤回了针对$LOSER|H$的独立保障，针对其的裁军终止。"
+ MESSAGE_DEMILITRAIZATION_REVOKE_GUARANTEE_TITLE:0 "裁军终止"
+
+ dm_prosperity_faction_approval:0 "执行裁军"
+ dm_isolationist_faction_approval:0 "执行裁军"
