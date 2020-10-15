@@ -23,7 +23,6 @@ country_event = {
 				}
 			}
 			else = {
-				log ="dm triggered 101"
 				dm_remove_loser_mod = {
 					loser = event_target:demilitarization_loser
 				}
