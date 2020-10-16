@@ -6,7 +6,6 @@ cb_demilitarize = {
 		is_pacifist = yes
 	}
 	is_valid = {
-		has_policy_flag = liberation_wars
         from = { is_country_type = default }
 		has_total_war_cb = no
 		NOT = { is_overlord_to = FROM }
