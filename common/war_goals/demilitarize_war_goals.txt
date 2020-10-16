@@ -16,9 +16,6 @@ wg_demilitarize = {
 			has_authority = auth_corporate
 		}
 		has_total_war_cb = no
-		from = {
-			NOT = { has_modifier = dm_demilitarized }  # Cannot be demilitarized twice
-		}
 	}
 
 	possible = {
@@ -34,6 +31,12 @@ wg_demilitarize = {
 			NOT = {
 				has_policy_flag = no_wars  # Cannot demilitarize defensive country
 			}
+		}
+		from = {
+			NOT = { has_modifier = dm_demilitarized }  # Cannot be demilitarized twice
+		}
+		from = {
+			NOT = { has_modifier = dm_demilitarized_mil }  # Cannot be demilitarized twice
 		}
 	}
 
