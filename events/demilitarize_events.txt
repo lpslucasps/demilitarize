@@ -26,22 +26,22 @@ country_event = {
 				dm_remove_loser_mod = {
 					loser = event_target:demilitarization_loser
 				}
-			}
-			# Message
-			create_message = {
-				type = DIPLO_ACTION_BREAK_GUARANTEE
-				localization = MESSAGE_DEMILITRAIZATION_REVOKE_GUARANTEE
-				days = 30
-				target = capital_scope
-				variable = {
-					type = name
-					localization = LOSER
-					scope = event_target:demilitarization_loser
-				}
-				variable = {
-					type = name
-					localization = VICTOR
-					scope = root
+				# Message
+				create_message = {
+					type = DIPLO_ACTION_BREAK_GUARANTEE
+					localization = MESSAGE_DEMILITRAIZATION_REVOKE_GUARANTEE
+					days = 30
+					target = capital_scope
+					variable = {
+						type = name
+						localization = LOSER
+						scope = event_target:demilitarization_loser
+					}
+					variable = {
+						type = name
+						localization = VICTOR
+						scope = root
+					}
 				}
 			}
 		}
