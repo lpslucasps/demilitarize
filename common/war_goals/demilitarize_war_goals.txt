@@ -61,10 +61,10 @@ wg_demilitarize = {
 				root = {
 					save_event_target_as = demilitarization_victor  # Must before 102
 				}
-				country_event = {
-					id = demilitarization.102
-					days = 1
-				}
+				# country_event = {
+				# 	id = demilitarization.102
+				# 	days = 1
+				# }
 			}
 
 			# Victor
@@ -97,10 +97,10 @@ wg_demilitarize = {
 					}
 				}
 			}
-			country_event = {
-				id = demilitarization.101
-				days = 1  # Delay to avoid removing buff
-			}
+			# country_event = {
+			# 	id = demilitarization.101
+			# 	days = 1  # Delay to avoid removing buff
+			# }
 		}
 	}
  
