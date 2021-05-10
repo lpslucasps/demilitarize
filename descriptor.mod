@@ -5,5 +5,5 @@ tags={
 	"Gameplay"
 }
 name="Demilitarize (fixed)"
-supported_version="2.7.2"
+supported_version="3.0.*"
 remote_file_id="2254396324"
