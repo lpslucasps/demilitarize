@@ -1,0 +1,53 @@
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1808317085]Demilitarize[/url] mod 的更新版本，兼容3.3.*，并加入一些新的内容。
+
+[h2]功能[/h2]
+
+这个mod为和平主义国家添加了一个叫做“裁军”的战争目标。你需要把战争哲学设置为解放战争才能用这个借口开战。
+
+当敌国被打败时将会受到一个舰队容量-50%，持续10年的debuff；同时战争政策被设置为“仅限防御战争”，并受到以下debuff，持续10年：
+[list]
+    [*] -40% 来自舰队的外交权重
+    [*] -20% 造船速度
+    [*] -10% 幸福度 (-15% 如果是军国主义国家)
+    [*] -10% 影响力收入 (-20% 如果是军国主义国家)
+    [*] +25% 军国主义思潮吸引力
+[/list]
+
+战胜国得到25%和平主义思潮吸引力和5%人口幸福度加成，持续10年。战胜方同时自动保障战败方独立。
+
+战胜国的繁荣和孤立派系会得到一个支持度修正以补偿侵略战争的认可度下降。
+
+[h2]限制[/h2]
+
+和平主义国家不应该四处发动战争。这个战争借口有如下限制
+[list]
+    [*] 发动者不能有内圣之道的国民理念。
+    [*] 发动者不能是巨型企业。
+    [*] 敌方不能正在遭受裁军。
+    [*] 敌方的舰队实力要高于“卑如蝼蚁”
+    [*] 敌方的战争政策不能是“仅限防御战争”。
+[/list]
+
+[h2]其他[/h2]
+
+可用语言：英语，简体中文和西班牙语。
+
+[b]不要同时使用这个mod和原本的mod。[/b]
+
+使用本mod时不能获得成就。
+
+[url=https://github.com/VictoriousRaptor/demilitarize]GitHub Repository[/url]
+
+
+[h3]我的其他Mod[/h3]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2742120496]Auto & Permanent Planetary Decisions 自动无限期大撒币[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2736965712]Gray Warship With Jump Drive 给灰风装上跃迁引擎[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2733387271]No More Charging Battleships Or Titans 不再冲锋的战列和泰坦[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2245491122]Locate It!（战略资源与巨构定位器）[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247594997]Societal Advancement (fixed)[/url]
+
+
+[h3]GitHub Repository[/h3]
+
+[url=https://github.com/VictoriousRaptor/demilitarize]Demilitarize (fixed)[/url]

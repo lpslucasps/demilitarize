@@ -1,0 +1,50 @@
+An updated and tweaked version of the original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1808317085]Demilitarize[/url] mod, compatible with 3.3.*.
+
+[h2]Features[/h2]
+
+This mod adds an war goal called Demilitarize exclusive for pacifist empires. Your War Philosophy needs to be set to Liberation Wars to wage wars.
+
+On surrender, the loser's War Philosophy will be set to Defensive Wars (Fanatic Militarist empires will be set to Liberation Wars due to Paradox's hard code), while receiving the following debuffs:
+[list]
+    [*] [b]-50% Naval Capacity[/b]
+    [*] -40% Diplomatic Weight from Fleet
+    [*] -20% Ship construction speed
+    [*] -10% Pop Happiness (-15% if a Militarist country)
+    [*] -10% Influence income (-20% if a Militarist country)
+    [*] +25% Militarist ethic attraction
+[/list]
+
+The victor gets 25% Pacifist ethic attraction and 5% Pop Happiness and guarantees the loser for free in 10 years .
+
+The Isolationist and Prosperity Factions will receive an extra approval modifier to compensate the decrease brought by waging a war.
+
+[h2]Limitaions[/h2]
+
+A Pacifist country should not wage wars. This Casus Belli has the following limitations:
+[list]
+    [*] The attacker can't have Inward Perfection Civic.
+    [*] The attacker can't be Mega Corp.
+    [*] The defender can't be under demilitarization.
+    [*] The defender's relative fleet power must be greater than "Pathetic".
+    [*] The defender's War Philosophy can't be Defensive Wars
+[/list]
+
+[h2]Others[/h2]
+
+Available in English, Spanish (thanks to JoniMega) and S.Chinese.
+
+[b]Don't activate this mod and the original mod.[/b]
+
+Not compatible with achievements.
+
+[h3]My Other Mods[/h3]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2742120496]Auto & Permanent Planetary Decisions[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2736965712]Gray Warship With Jump Drive[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2733387271]No More Charging Battleships Or Titans[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2245491122]Locate It![/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247594997]Societal Advancement (fixed)[/url]
+
+[h3]GitHub Repository[/h3]
+
+[url=https://github.com/VictoriousRaptor/demilitarize]Demilitarize (fixed)[/url]
