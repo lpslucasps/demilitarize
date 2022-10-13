@@ -1,11 +1,14 @@
-
 wg_demilitarize = {
 	casus_belli = cb_demilitarize
 
 	hide_if_no_cb = yes
 
 	surrender_acceptance = -75
-
+	allowed_peace_offers = { 
+		surrender
+		status_quo
+		demand_surrender
+	}
 
 	potential = {
 		NOR = {
@@ -13,33 +16,107 @@ wg_demilitarize = {
 			has_authority = auth_corporate
 		}
 		has_total_war_cb = no
+	}
+
+	possible = {
+		# always = yes
 		from = {
-			NOT = { has_modifier = dm_demilitarized }
+			relative_power = { 
+				who = root 
+				category = fleet
+				value > pathetic
+			}
+		}
+		from = {
+			NOT = {
+				has_policy_flag = no_wars  # Cannot demilitarize defensive country
+			}
+		}
+		from = {
+			NOT = { has_modifier = dm_demilitarized }  # Cannot be demilitarized twice
+		}
+		from = {
+			NOT = { has_modifier = dm_demilitarized_mil }  # Cannot be demilitarized twice
 		}
 	}
-	possible = {
-		always = yes
-	}
+
 	on_accept = {
-        custom_tooltip = wg_demilitarize_accept
+		custom_tooltip = wg_demilitarize_accept
         hidden_effect = {
-            add_resource = { influence = 100 }
+			# Loser
             from = {
-				add_modifier = { modifier = dm_demilitarized days = 7200 }
+				save_event_target_as = demilitarization_loser
+				if = {
+					limit = { is_militarist = yes }
+					add_modifier = { modifier = dm_demilitarized_mil days = 3600 }
+				}
+				else = {
+					add_modifier = { modifier = dm_demilitarized days = 3600 }
+				}
 				set_policy = {
 					policy = war_philosophy
 					option = no_wars
 					cooldown = yes
 				}
+				root = {
+					save_event_target_as = demilitarization_victor  # Must before 102
+				}
+				# country_event = {
+				# 	id = demilitarization.102
+				# 	days = 1
+				# }
 			}
+
+			# Victor
 			guarantee_country = {
 				target = from
-				free_guarantee_days = 7200
+				free_guarantee_days = 3600
 			}
-    }
+			add_resource = { influence = 150 }
+			add_modifier = {
+				modifier = dm_demilitarizer
+				days = 3600
+			}
+			every_pop_faction = {
+				if = {
+					limit = { 
+						is_pop_faction_type = isolationist 
+					}
+					add_modifier = {
+						modifier = dm_isolationist_faction_approval
+						days = 7200
+					}
+				}
+				else_if = {
+					limit = {
+						is_pop_faction_type = prosperity
+					}
+					add_modifier = {
+						modifier = dm_prosperity_faction_approval
+						days = 7200
+					}
+				}
+			}
+			# country_event = {
+			# 	id = demilitarization.101
+			# 	days = 1  # Delay to avoid removing buff
+			# }
+		}
 	}
-
+ 
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 2
+			from = { has_ethic = ethic_militarist }
+		}
+		modifier = {
+			factor = 5
+			from = { has_ethic = ethic_fanatic_militarist }
+		}
+		modifier = {
+			factor = 2
+			is_rival = from
+		}
 	}
 }

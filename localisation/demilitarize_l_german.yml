@@ -1,8 +1,17 @@
-﻿l_english:
+﻿l_german:
 
- casus_belli_cb_demilitarize:0 "Demilitarize"
+ casus_belli_cb_demilitarize:0 "Parabellum"
  war_goal_wg_demilitarize:0 "Demilitarize"
  war_goal_wg_demilitarize_desc:0 "War is waged to contain the warmongering tendencies of the enemy."
- wg_demilitarize_accept:0 "§Y[From.GetName]§! is demilitarized, reducing their §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§! by §R-50%§! for §Y20§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
+ wg_demilitarize_accept:0 "§Y[From.GetName]§! is demilitarized, reducing their §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§! by §R-50%§! in §Y10§! years. $ethic_militarist$ attraction is increased by §G+25%§!. §Y$MOD_STARBASE_SHIP_BUILD_TIME_MULT$§!, §Y$MOD_POP_HAPPINESS$§!, §Y$MOD_DIPLO_WEIGHT_NAVAL_MULT$§! and §Y$mod_country_base_influence_produces_mult$§! get debuffed. \n§Y[Root.GetName]§! gains §G+150§!£influence£ and §Y$MOD_POP_HAPPINESS$§! buff, while $ethic_pacifist$ attarction is increased by §G+20%§!."
  dm_demilitarized:0 "Demilitarized"
  dm_demilitarized_desc:0 "§LWe were demilitarized by another Empire.§!"
+ dm_demilitarized_mil:0 "$dm_demilitarized$"
+ dm_demilitarized_mil_desc:0 "$dm_demilitarized_desc$"
+ dm_demilitarizer:0 "Demilitarizer"
+ dm_demilitarizer_desc:0 "§LWe are demilitarizing another Empire.§!"
+
+ MESSAGE_DEMILITRAIZATION_REVOKE_GUARANTEE:0 "Since $VICTOR|H$ revoke guarantee of $LOSER|H$, the demilitarization of $LOSER|H$ has now stopped."
+
+ dm_prosperity_faction_approval:0 "Demilitarizer"
+ dm_isolationist_faction_approval:0 "Demilitarizer"

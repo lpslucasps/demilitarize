@@ -1,8 +1,17 @@
-﻿l_english:
+﻿l_spanish:
 
- casus_belli_cb_demilitarize:0 "Demilitarize"
- war_goal_wg_demilitarize:0 "Demilitarize"
- war_goal_wg_demilitarize_desc:0 "War is waged to contain the warmongering tendencies of the enemy."
- wg_demilitarize_accept:0 "§Y[From.GetName]§! is demilitarized, reducing their §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§! by §R-50%§! for §Y20§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
- dm_demilitarized:0 "Demilitarized"
- dm_demilitarized_desc:0 "§LWe were demilitarized by another Empire.§!"
+ casus_belli_cb_demilitarize:0 "Desmilitarización"
+ war_goal_wg_demilitarize:0 "Desmilitarizar"
+ war_goal_wg_demilitarize_desc:0 "Esta guerra se libra para contener las tendecias belicistas del enemigo."
+ wg_demilitarize_accept:0 "§Y[From.GetName]§! has sido desmilitarizada, reduciondose su §Y$MOD_COUNTRY_NAVAL_CAP_MULT$§! un §R-50%§! y su felicidad durante §Y10§! años, y la $ethic_militarist$ se \n vuelve un §G+25%§! más popular. También tendrán penalizaciones en §Y$MOD_STARBASE_SHIP_BUILD_TIME_MULT$§!, §Y$MOD_POP_HAPPINESS$§!, §Y$MOD_DIPLO_WEIGHT_NAVAL_MULT$§! y §Y$mod_country_base_influence_produces_mult$§!. \n§Y[Root.GetName]§! consigue §G+150§!£influence£ y §Y$MOD_POP_HAPPINESS$§!, además la atraccion $ethic_pacifist$ incrementará un §G+20%§!."
+ dm_demilitarized:0 "Desmilitarizado"
+ dm_demilitarized_desc:0 "§LHemos sido desmilitarizados por otro Imperio.§!"
+ dm_demilitarized_mil:0 "$dm_demilitarized$"
+ dm_demilitarized_mil_desc:0 "$dm_demilitarized_desc$"
+ dm_demilitarizer:0 "Desmilitarizador"
+ dm_demilitarizer_desc:0 "§LHemos desmilitarizado otro Imperio.§!"
+
+ MESSAGE_DEMILITRAIZATION_REVOKE_GUARANTEE:0 "Des de que $VICTOR|H$ revocó la garantia de proteccion de $LOSER|H$, la desmilitarización de $LOSER|H$ ha sido supendida."
+
+ dm_prosperity_faction_approval:0 "Desmilitarizador"
+ dm_isolationist_faction_approval:0 "Desmilitarizador"
